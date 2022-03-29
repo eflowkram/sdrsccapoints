@@ -1,0 +1,119 @@
+AS - 'A Street' - Total Entries: 3,,,,,,,,,,,
+1,AS,397,Sebastian Rios,2014 Porsche Cayman S,,37.042+1,34.959,35.118,34.810,34.81,[-]0.277
+2,AS,0,Bill Sanford,2005 Lotus Elise,DCCSD,36.24,35.087,35.359,35.314,35.087,0.277
+3,AS,517,Andrew Ellis,2008 Porsche 911 Carerra S,SCNAX,37.115,36.382,36.137,39.449+1,36.137,1.05
+BS - 'B Street' - Total Entries: 2,,,,,,,,,,,
+1,BS,91,Dana Lucas,2007 Mazda mx5,SCNAX,37.664,39.341+1,36.981,36.944,36.944,[-]0.658
+2,BS,79,Judy Murray,2007 Mazda MX-5,SCNAX,38.616,37.602,38.64,37.93,37.602,0.658
+CS - 'C Street' - Total Entries: 8,,,,,,,,,,,
+1,CS,193,Sean Velandia,2016 Mazda MX-5,,39.669+2,35.671,35.578,35.333,35.333,[-]0.637
+2,CS,10,Scott Lewis,2017 Mazda MX5,SCAT,36.462,36.462,36.174,35.970,35.97,0.637
+3,CS,99,Mark Wolfe,2021 Mazda MX-5,SCAT,36.919,36.169,38.252+1,36.364,36.169,0.199
+4,CS,216,Thomas Frecentese,2021 Mazda MX5,,37.264,44.262+4,38.525+1,36.190,36.19,0.021
+5,CS,118,George Sklyarevsky,2021 Mazda MX-5,,37.293,36.477,38.262+1,38.358+1,36.477,0.287
+6,CS,202,Tim Schultz,2019 Mazda MX-5,SCNAX,37.702,37.845,36.686,38.944+1,36.686,0.209
+7,CS,139,Ken Suzuki,2016 Mazda MX-5,,40.973+1,40.408+1,38.123,39.769+1,38.123,1.437
+8,CS,762,Bijan Jahanpanah,2019 Mazda MX-5 Miata,,38.652,39.910+1,39.748+1,39.298+1,38.652,0.529
+DS - 'D Street' - Total Entries: 3,,,,,,,,,,,
+1,DS,407,Thomas Kenna,1999 BMW M3,DCCSD,43.609+3,37.402,36.839,36.906,36.839,[-]1.406
+2,DS,423,Kyle Pantaleon,2019 Subaru WRX,DCCSD,40.748+1,38.88,41.082+1,38.245,38.245,1.406
+3,DS,102,Corey Brigner,2020 Subaru Wrx,,43.943,42.259,40.8,39.766,39.766,1.521
+ES - 'E Street' - Total Entries: 2,,,,,,,,,,,
+1,ES,696,Joey Jordan,2003 Mazda Miata,,41.709,42.131,41.115,40.696,40.696,[-]1.909
+2,ES,256,Felix Binder,2001 Mazda Miata,,43.734,42.467+DNF,43.339,42.605,42.605,1.909
+ESL - 'E Street Ladies' - Total Entries: 3,,,,,,,,,,,
+1,ESL,697,Jahna Jordan,2001 Mazda Miata,,44.931,43.911,42.791,,42.791,[-]1.325
+2,ESL,694,Eva Saffar,2001 Mazda Miata,,53.316,46.695,44.354,44.116,44.116,1.325
+3,ESL,469,Janice Jordan,2001 Mazda Miata,,53.508,48.574,47.094,45.639,45.639,1.523
+FS - 'F Street' - Total Entries: 2,,,,,,,,,,,
+1,FS,3,Hank Yamfang,2016 Ford Mustang,SCNAX,40.045,40.202+1,37.807,37.626,37.626,[-]3.857
+2,FS,13,Erica Yamfang,2016 Ford Mustang,SCNAX,41.72,41.483,41.899,54.77,41.483,3.857
+GS - 'G Street' - Total Entries: 1,,,,,,,,,,,
+1,GS,210,David Rayl,2018 Ford Focus ST,,40.129,38.625,38.269,39.089,38.269,-
+HS - 'H Street' - Total Entries: 2,,,,,,,,,,,
+1,HS,240,Rick Brown,2017 Ford Fiesta ST,SCNAX,43.398,41.711,42.455+1,42.829+1,41.711,[-]1.305
+2,HS,222,James Scheiber,2005 Ford Focus,,46.472,43.988,43.016,45.066+1,43.016,1.305
+STS - 'Street Touring Sport' - Total Entries: 2,,,,,,,,,,,
+1,STS,474,Jon Nottage,2018 Mazda Mazda6,DCCSD,38.311,41.460+2,38.144,37.416,37.416,[-]4.965
+2,STS,867,Dan Stapleton,1999 Mazda Miata,,45.015,42.75,43.209+DNF,42.381,42.381,4.965
+STR - 'Street Touring Roadster' - Total Entries: 6,,,,,,,,,,,
+1,STR,182,Matt Jones,2019 Mazda MX-5,,34.695,34.383,33.915,34.08,33.915,[-]1.051
+2,STR,980,Jason Munchof,2008 Honda S2000,,39.475+2,35.106,34.966,36.779+1,34.966,1.051
+3,STR,688,Nima Abrahim,2017 Mazda Miata,SCAT,36.312,40.803+2,35.145,35.027,35.027,0.061
+4,STR,782,Sara Odioso,2019 Mazda MX-5,,36.712,35.951,35.734,35.261,35.261,0.234
+5,STR,168,Michael Palero,2022 Subaru BRZ,SCNAX,35.635,37.665+1,35.470,37.138+1,35.47,0.209
+6,STR,513,Aidan Giunta,2015 Mazda MX-5 Miata,,38.643,38.263,37.725,37.544,37.544,2.074
+STU - 'Street Touring Ultra' - Total Entries: 1,,,,,,,,,,,
+1,STU,125,Dona Ly,2020 BMW M2 Competition,,46.031,44.018,42.325,41.663,41.663,-
+STH - 'Street Touring H' - Total Entries: 2,,,,,,,,,,,
+1,STH,825,Josh Hoffman,2017 Ford Focus ST,,42.35,41.077,41.174,39.965,39.965,[-]2.829
+2,STH,902,Fidel Trujillo,2020 Hyundai Veloster N,,50.067,46.111,43.028,42.794,42.794,2.829
+SST - 'Super Street Touring' - Total Entries: 1,,,,,,,,,,,
+1,SST,78,Chris Teague,2011 Chevrolet Corvette,DCCSD,35.887,35.826,36.349,37.736+1,35.826,-
+CSP - 'C Street Prepared' - Total Entries: 3,,,,,,,,,,,
+1,CSP,537,George Pollock,1982 Mazda RX7 GSL,,39.305+1,36.796,36.073,35.326,35.326,[-]0.426
+2,CSP,80,Craig Naylor,1995 Mazda Miata,SCAT,36.598,36.165,35.752,38.365+1,35.752,0.426
+3,CSP,236,Mitchel Summers,2003 Mazda Miata,SCAT,39.169,38.579,39.083,38.973,38.579,2.827
+DSP - 'D Street Prepared' - Total Entries: 3,,,,,,,,,,,
+1,DSP,717,Sam Rezai,2012 BMW 328i,,39.483,37.889,37.787,37.794,37.787,[-]1.734
+2,DSP,451,David Bauer,1994 Honda Prelude,,42.852+1,40.674,39.521,39.997,39.521,1.734
+3,DSP,351,William Tabios,2001 Lexus IS300,,44.927,42.965,43.535,42.438,42.438,2.917
+ESP - 'E Street Prepared' - Total Entries: 6,,,,,,,,,,,
+1,ESP,699,Ewald Polifrone,2011 BMW M3,,38.857,38.721,38.198,38.082,38.082,[-]1.218
+2,ESP,233,Bob Hospodar,2000 Ford Mustang GT,,41.382,40.2,40.006,39.300,39.3,1.218
+3,ESP,759,Fred Enriquez,2003 Infiniti G35,SCNAX,40.826,43.417+DNF,41.699+1,39.681,39.681,0.381
+4,ESP,337,Filamore Tabios,1987 Toyota Supra,,41.81,42.179+1,41.191+1,39.809,39.809,0.128
+5,ESP,104,Samantha Lei,2017 Cadillac ATS-V,,44.905,46.119,42.107,41.647,41.647,1.838
+6,ESP,50,Kent Hall,1991 Ford Mustang,,43.168,42.009,41.708,42.956+1,41.708,0.061
+SMF - 'Street Modified Fwd' - Total Entries: 1,,,,,,,,,,,
+1,SMF,282,Danny Gross,2008 Mazda 3 2.5,,35.485,34.583,34.459,34.276,34.276,-
+SSM - 'Super Street Modified' - Total Entries: 1,,,,,,,,,,,
+1,SSM,647,Doug Johnson,2017 Chevrolet Z06,,41.434,41.032,38.75,38.053,38.053,-
+P1 - 'Prepared 1 (indexed)' - Total Entries: 2,,,,,,,,,,,
+1,DP,167,Darlene Pittman,1967 Lotus Elan,,38.946+2,34.866,34.577,34.947,29.909,[-]0.428
+2,DP,67,Robbie Robinson,1967 Lotus Elan,DCCSD,35.904,35.384,35.072,35.668,30.337,0.428
+HCR - 'Heritage Classic R' - Total Entries: 1,,,,,,,,,,,
+1,HCR,98,John De Vries,1960 Dolphin America,SCAT,52.274,51.765,,,51.765,-
+CAMC - 'CAM-Contemporary' - Total Entries: 4,,,,,,,,,,,
+1,CAMC,856,Will Flores,2017 Chevrolet Camaro 1LE,,38.780+1,37.934+1,35.737,35.918,35.737,[-]0.649
+2,CAMC,44,David Reiner,2020 Chevrolet ZELJUAN HYBRID,,39.375+1,36.386,36.857,36.647,36.386,0.649
+3,CAMC,241,DEXTER James Rojas,2019 Ford Mustang GT350R,,44.817,40.974,40.051,39.106,39.106,2.72
+4,CAMC,120,Brian Stafford,2018 Chevrolet Camaro,SCNAX,40.797+1,40.683+2,41.413+3,40.119+2,40.119,1.013
+CAMT - 'CAM-Traditional' - Total Entries: 7,,,,,,,,,,,
+1,CAMT,663,Chris Humphreys,1973 Chevrolet Camaro,,37.024+1,34.466,35.141,39.296+2,34.466,[-]1.338
+2,CAMT,180,Mike Hogate,1969 Chevrolet Nova,,39.653+1,36.901,36.21,35.804,35.804,1.338
+3,CAMT,464,Harrison Beach,1964 Chevrolet Nova Wagon,,37.005,36.554,36.821,36.159,36.159,0.355
+4,CAMT,81,Peter Pelekis,1992 Ford Mustang,,36.666,36.802,37.187,36.181,36.181,0.022
+5,CAMT,207,Mike Balzer,1993 Ford Mustang,,37.572,40.918+2,37.18,36.981,36.981,0.8
+6,CAMT,208,Austin Bittle,2003 Ford Mustang Cobra,,38.012,38.426,37.493,39.350+1,37.493,0.512
+7,CAMT,540,Fred Fogerty,1969 Chevrolet Camaro,DCCSD,38.585,38.68,38.546,37.957,37.957,0.464
+CAMS - 'CAM-Sports' - Total Entries: 1,,,,,,,,,,,
+1,CAMS,82,Henry Botkin,1972 Chevrolet Corvette,DCCSD,37.053,44.652,36.279,35.622,35.622,-
+XS - 'Xtreme Street (indexed)' - Total Entries: 14,,,,,,,,,,,
+1,XA,23,Peter Bollenbecker,2007 Subaru STI,SCNAX,35.18,34.204,40.209+1,34.91,28.799,[-]0.217
+2,XB,198,Mike Flanigan,2016 Mazda MX5,,37.101+1,34.173,34.097,35.944+1,29.016,0.217
+3,EV,369,Jonathan Bickford,2020 Tesla Model 3 performance,,38.304+1,35.941,35.081,34.913,29.152,0.136
+4,XA,123,Diane Bollenbecker,2007 Subaru STI,SCNAX,36.712,34.795,34.885,40.287+2,29.297,0.145
+5,EV,561,Joseph Parsons,2022 Tesla Model 3 Performance,,38.302+1,35.719,36.690+1,35.281,29.459,0.162
+6,XA,32,James Fitzpatrick,2005 Subaru WRX STI,SCNAX,36.15,36.191,35.750,41.749+2,30.101,0.642
+7,XA,158,Edwin Liu,1991 Acura NSX,SCNAX,36.716,37.870+1,35.806,40.697+2,30.148,0.047
+8,XA,223,Hieu Nguyen,2004 Honda S2000,SCNAX,40.532+2,36.236,36.528,38.164+1,30.51,0.362
+9,XA,42,Eric Sakariasen,2020 Toyota Supra (GR),SCNAX,39.315+1,36.537,36.297,41.696+1,30.562,0.052
+10,XA,92,Josh Fischer,1987 BMW 325is,,37.218,36.719,36.895,36.391,30.641,0.079
+11,XB,251,Mark Mervich,2006 Mazda Miata,SCAT,37.89,38.566+1,36.497,36.051,30.679,0.038
+12,XB,235,Paul Hualde,2006 Mazda Miata,,38.256,36.103,36.133,36.207,30.723,0.044
+13,XA,24,Angela Sakariasen,2020 Toyota Supra (GR),SCNAX,41.971+1,39.149,42.216+2,39.032,32.864,2.141
+14,EV,672,Kamran Jahanpanah,2021 Tesla 3,,41.370+DNF,43.752,40.395,40.411,33.729,0.865
+M1 - 'Modified 1 (indexed)' - Total Entries: 3,,,,,,,,,,,
+1,EM,143,Jeff Kiesel,2020 KFR Turbo Sprite,,31.669,30.836,30.119,33.873+2,27.378,[-]3.251
+2,DM,17,David Laird,1962 Lotus Super7,DCCSD,36.371,34.373,34.209,34.109,30.629,3.251
+3,FM,910,Igor Andric,2017 Formula 500,,36.201,34.916,34.862,38.796+1,31.654,1.025
+PAX - 'PAX (indexed)' - Total Entries: 8,,,,,,,,,,,
+1,SSP,461,Jeff Wong,2019 Chevrolet Corvette,,32.925,33.034,34.767+1,32.781,27.962,[-]0.652
+2,SS,293,Derek Punch,2020 Porsche Gt4,DCCSD,35.187,34.935,38.370+2,34.475,28.614,0.652
+3,AS,497,Shauna Rios,2014 Porsche Cayman S,,36.239,35.632,34.861,35.142,28.62,0.006
+4,FM,94,Zak Kiesel,2022 KFR Ebon Hawk,SCNAX,38.947,32.233,31.849,31.590,28.683,0.063
+5,SSP,161,Nicole Wong,2019 Chevrolet Corvette,,35.711+1,34.293,33.753,34.04,28.791,0.108
+6,AS,122,Stephen Hare,2003 Chevrolet Corvette,,36.173,36.477,35.932,40.255+2,29.5,0.709
+7,FS,917,Austin Kirk,2017 Chevrolet Camaro,,39.249+1,36.542,36.708,36.833,29.745,0.245
+8,SSC,192,Maia Kirk,2013 Scion FRS,,39.532,38.491,38.453,38.215,30.915,1.17

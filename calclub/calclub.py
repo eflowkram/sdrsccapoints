@@ -293,15 +293,12 @@ def main():
             results = execute_read_query(db_conn, sql)
             driver_id = results[0][0]
             avg_points = average_points(driver_id, car_class)
-            print(avg_points)
             sql = f"INSERT into class_results VALUES (NULL,'{event_date}',{driver_id},'{car_class}',0,0,{avg_points},1)"
             results = execute_query(db_conn, sql)
-            print(results)
         else:
             print("Records Found, updating average")
             driver_id = results[0][1]
             avg_points = average_points(driver_id, car_class)
-            print(avg_points)
             sql = f"UPDATE class_results set points={avg_points} where event_date='{event_date}' and driver_id={driver_id} and class='{car_class}' and national = 1"
             results = execute_query(db_conn, sql)
 

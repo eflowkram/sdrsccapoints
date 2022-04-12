@@ -110,7 +110,7 @@ def execute_read_query(connection, query):
         print(f"The error '{e}' occurred")
 
 
-def average_points(driver_id, car_class):
+def update_average_points(driver_id, car_class):
     sum_points = float()
     sql = f"SELECT points from class_results where class = '{car_class}' and driver_id = '{driver_id}' and national = 0"
     points = execute_read_query(db_conn, sql)
@@ -118,8 +118,10 @@ def average_points(driver_id, car_class):
     for n in points:
         sum_points += n[0]
     avg_points = sum_points / points_count
-    return round(avg_points, 3)
-
+    avg_points=round(avg_points,3)
+    sql = f"UPDATE class_results set points = {avg_points} where  class = '{car_class}' and driver_id = '{driver_id}' and national = 1"
+    execute_query(db_conn, sql)
+    return
 
 def calclub_drops(events):
     if events < 4:
@@ -278,11 +280,6 @@ def main():
         event_date = args.event_date
         car_number = args.national
         car_class = args.car_class.upper()
-        sum_points = float()
-        total = float()
-        c = 0
-        avg = float()
-        # Check to see if this record exists for car number + class +
         # event_date.
         sql = f"SELECT class_results.id,drivers.id from class_results JOIN drivers on drivers.id = driver_id where event_date = '{event_date}' and class = '{car_class}' and car_number = '{car_number}'"
         results = execute_read_query(db_conn, sql)
@@ -292,15 +289,13 @@ def main():
             sql = f"SELECT id from drivers where car_number = '{car_number}'"
             results = execute_read_query(db_conn, sql)
             driver_id = results[0][0]
-            avg_points = average_points(driver_id, car_class)
-            sql = f"INSERT into class_results VALUES (NULL,'{event_date}',{driver_id},'{car_class}',0,0,{avg_points},1)"
+            sql = f"INSERT into class_results VALUES (NULL,'{event_date}',{driver_id},'{car_class}',0,0,0,1)"
             results = execute_query(db_conn, sql)
+            update_average_points(driver_id, car_class)
         else:
             print("Records Found, updating average")
             driver_id = results[0][1]
-            avg_points = average_points(driver_id, car_class)
-            sql = f"UPDATE class_results set points={avg_points} where event_date='{event_date}' and driver_id={driver_id} and class='{car_class}' and national = 1"
-            results = execute_query(db_conn, sql)
+            update_average_points(driver_id,car_class)
 
     if args.generate:
         """
@@ -321,6 +316,7 @@ def main():
           driver_class_results=execute_read_query(db_conn,sql)
           for c in driver_class_results:
             car_class=c[0]
+            update_average_points(driver_id,car_class)
             print(f"driver_id: {driver_id} class: {c[0]}")
             total_points=total_class_points(driver_id,c[0])
             sql=f"INSERT into points values (NULL,{driver_id},'{car_class}',{total_points})"

@@ -11,38 +11,6 @@ import sqlite3
 from sqlite3 import Error
 
 database_name = 'points.db'
-class_list = [
-    'PAX',
-    'PAXL',
-    'SS',
-    'AS',
-    'BS',
-    'CS',
-    'DS',
-    'ES',
-    'FS',
-    'GS',
-    'HS',
-    'SSC',
-    'HST1',
-    'STS',
-    'STR',
-    'STH',
-    'STX',
-    'STU',
-    'SP',
-    'SMC',
-    'CSM',
-    'CST',
-    'XS',
-    'M',
-    'NOV',
-    'CAM-C',
-    'CAM-S',
-    'CAM-T',
-    'TO',
-    'X']
-non_points = ['TO', 'X']
 
 class_results_table = """
 CREATE TABLE class_results (

@@ -1,0 +1,255 @@
+Connection to SQLite DB successful
+
+Place     Driver                   Car Number     Class     Points              
+1         David Rios               797            AS        279.945             
+2         Mihail Milkov            22             AS        200                 
+3         Anne Obee                807            AS        115.025             
+4         Bill Sanford             0              AS        100                 
+5         Sebastian Rios           397            AS        99.884              
+
+Place     Driver                   Car Number     Class     Points              
+1         Tom Tanquary             705            BS        297.134             
+2         Curt Luther              9              BS        292.066             
+
+Place     Driver                   Car Number     Class     Points              
+1         Dan Kohler               213            CAM-C     294.397             
+2         David Reiner             44             CAM-C     293.92              
+3         Paul Rolzin              576            CAM-C     280.538             
+4         Jeffrey Vandenhende      438            CAM-C     277.836             
+5         Earl Merz                40             CAM-C     100                 
+6         Marcus Merideth          189            CAM-C     97.624              
+
+Place     Driver                   Car Number     Class     Points              
+1         Henry Botkin             182            CAM-S     287.241             
+2         Chris Teague             78             CAM-S     276.549             
+3         Thomas Kamman            47             CAM-S     100                 
+4         Matthew Gonzalez         486            CAM-S     100                 
+5         James Elliott            781            CAM-S     99.02               
+6         Bry has Fun Morris       41             CAM-S     79.161              
+
+Place     Driver                   Car Number     Class     Points              
+1         Thomas Kamman            47             CAM-T     100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Mark Wolfe               97             CS        297.089             
+2         Jeff Spencer             376            CS        296.944             
+3         Leonard Cachola          82             CS        281.585             
+4         Brandon Warren           53             CS        280.873             
+5         Michael Russell          102            CS        260.937             
+6         Xavier Herrera-Keehn     313            CS        233.176             
+7         Max Guijarro             905            CS        212.931             
+8         Kathy Teulie             96             CS        204.994             
+9         George Sklyarevsky       181            CS        184.806             
+10        Christopher Hamilton     315            CS        166.258             
+11        Thomas Guest Jr.         314            CS        163.16              
+12        Matt Wherry              51             CS        161.439             
+13        James Gatchel            250            CS        154.736             
+14        Ray Earls                429            CS        150.951             
+15        Francisco Sierra         519            CS        146.134             
+16        Matt Wherry              302            CS        71.561              
+17        Paul Hualde              236            CS        71.325              
+18        Bijan Jahanpanah         726            CS        71.257              
+19        Jasmine Zhang            396            CS        41.963              
+20        Desmond Guijarro         509            CS        39.789              
+
+Place     Driver                   Car Number     Class     Points              
+1         John Wang                788            CSM       100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Joseph Parsons           561            CST       300                 
+2         Scott Hanson             248            CST       217.425             
+3         Jonathan Bickford        369            CST       183.553             
+4         Patrick McBride          25             CST       104.552             
+5         Kyle ORourke             68             CST       100                 
+6         Sam Mayorga              183            CST       82.914              
+7         Isaac Lam                24             CST       72.761              
+8         Austin Kirk              91             CST       72.22               
+
+Place     Driver                   Car Number     Class     Points              
+1         Christopher Rosario      324            DS        296.561             
+2         Alex Valencia            33             DS        294.959             
+3         Trevor Brown             117            DS        282.156             
+4         Dung Nguyen              66             DS        281.68              
+5         Robert Puertas           35             DS        175.944             
+6         Thomas Kenna             42             DS        173.085             
+7         Steve Houston            990            DS        161.957             
+8         Kaustav Acharya          214            DS        79.818              
+9         Eric Wilder              340            DS        65.172              
+
+Place     Driver                   Car Number     Class     Points              
+1         Benjamin Cohen           59             ES        300                 
+2         Elvin Hom                128            ES        237.094             
+3         Ezra DePree              759            ES        233.839             
+4         Keith Lyon               287            ES        144.596             
+5         Jack Tsou                8              ES        58.181              
+
+Place     Driver                   Car Number     Class     Points              
+1         Maurice Polak            267            FS        200                 
+2         Myles Wakayama           310            FS        100                 
+3         Nic Sanchez              67             FS        77.133              
+4         Seung Uk Han             305            FS        70.762              
+
+Place     Driver                   Car Number     Class     Points              
+1         Don Green                29             GS        300                 
+2         Scott McHugh             45             GS        100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Rick Brown               240            HS        100                 
+2         Nolan Van Wyk            999            HS        100                 
+3         Jamel Reaves             886            HS        100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Brian Howlett            111            HST1      300                 
+2         Jim Whelan               441            HST1      141.194             
+3         Ted Robinson             56             HST1      123.968             
+4         Cal Woolsey              211            HST1      50.345              
+
+Place     Driver                   Car Number     Class     Points              
+1         Keith Lyon               287            HST2      200                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Jason Swindle            5              M         300                 
+2         David Laird              71             M         84.69               
+
+Place     Driver                   Car Number     Class     Points              
+1         Eric Jones               100            NOV       296.967             
+2         Michael Bailey           826            NOV       268.178             
+3         Davis Landry             890            NOV       267.132             
+4         Joshua Deighton          481            NOV       188.899             
+5         Logan Williams           919            NOV       168.292             
+6         Arman Ahmadi             307            NOV       148.158             
+7         Jed Polinsky             762            NOV       136.79              
+8         Tanya Spencer            379            NOV       135.291             
+9         Lori Bailey              413            NOV       104.918             
+10        Ian Carpio               821            NOV       100.33              
+11        Vincent Trommer          246            NOV       100                 
+12        Chris Wilson             945            NOV       77.785              
+13        Jake Daye                959            NOV       73.796              
+14        Jasmine Zhang            396            NOV       65.447              
+15        Kadin Mangunsong         409            NOV       39.076              
+16        Chandra Mangunsong       537            NOV       38.493              
+17        John Ford                937            NOV       34.235              
+18        Jose Hernandez           226            NOV       32.969              
+19        Hendry Kurniawan         735            NOV       26.788              
+
+Place     Driver                   Car Number     Class     Points              
+1         Lori Bailey              413            NOVL      187.446             
+2         Tanya Spencer            379            NOVL      100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Robbie Robinson          167            P         100                 
+2         Darlene Pittman          767            P         96.004              
+
+Place     Driver                   Car Number     Class     Points              
+1         James Yom                19             PAX       300                 
+2         Matt Jones               187            PAX       287.751             
+3         Dennis Hubbard           471            PAX       284.996             
+4         Steve OBlenes            3              PAX       278.975             
+5         Tom Layton               79             PAX       277.542             
+6         Scott Mullens            500            PAX       275.482             
+7         Jeff Stuart              13             PAX       273.414             
+8         Jonathan Lugod           4              PAX       272.714             
+9         Bill Sanford             0              PAX       268.781             
+10        Stephen Yeoh             88             PAX       268.013             
+11        Sebastian Rios           397            PAX       267.453             
+12        Neelu Yeoh               887            PAX       261.684             
+13        Adrian Cardenas          170            PAX       255.831             
+14        Marshall Grice           11             PAX       240.342             
+15        Marco Cruz               798            PAX       220.121             
+16        Thomas Frecentese        62             PAX       183.382             
+17        Danny Gross              177            PAX       182.689             
+18        Edward Tsui              711            PAX       176.02              
+19        Steve McLaughlin         259            PAX       159.95              
+20        Zach Taulbee             184            PAX       152.835             
+21        Tom Nakase               386            PAX       121.431             
+22        Derek Punch              169            PAX       91.059              
+23        Alex Valencia            33             PAX       85.641              
+24        Paul Rolzin              576            PAX       83.296              
+25        Mark DeShon              113            PAX       79.904              
+26        Clint Boyd               57             PAX       79.748              
+27        Yon Visell               131            PAX       78.023              
+28        Toby Pederson            295            PAX       68.363              
+29        Hendry Kurniawan         735            PAX       0.312               
+
+Place     Driver                   Car Number     Class     Points              
+1         Shauna Rios              497            PAXL      296.732             
+2         Lisa Berry               171            PAXL      291.345             
+3         Yuting Guan              20             PAXL      285.048             
+4         Sara Odioso              87             PAXL      270.449             
+5         Theresa Berry            172            PAXL      261.822             
+6         Jessica Yeung            84             PAXL      258.722             
+7         Laura Corodimas          32             PAXL      257.995             
+8         Catherine Tran           70             PAXL      177.944             
+9         Maia Kirk                38             PAXL      122.813             
+10        Kendra Mabie             122            PAXL      88.532              
+11        Aurene Ilag              860            PAXL      60.884              
+
+Place     Driver                   Car Number     Class     Points              
+1         Matt Davis               562            SMC       100                 
+2         Cristian Hernandez       1127           SMC       100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         Marc Leininger           83             SP        300                 
+2         Doug Teulie              99             SP        278.135             
+3         Rudi Marci               93             SP        184.729             
+4         Filamore Tabios          337            SP        150.71              
+5         Bob Hospodar             233            SP        107.756             
+6         BJ Fulton                277            SP        84.039              
+7         Yon Visell               131            SP        81.674              
+8         Nigel Haynes             867            SP        54.066              
+9         Mark A. Wright           225            SP        36.889              
+10        Katja Seltmann           311            SP        36.795              
+11        William Tabios           351            SP        32.316              
+12        John Hellen              252            SP        0.287               
+
+Place     Driver                   Car Number     Class     Points              
+1         Randy Gonzalez           1              SS        300                 
+2         Robert Johnson           707            SS        237.966             
+3         Tim Tunnermann           503            SS        84.593              
+4         Aurene Ilag              860            SS        81.388              
+5         Ryan Takeda              202            SS        70.501              
+6         Bijan Jahanpanah         726            SS        51.47               
+
+Place     Driver                   Car Number     Class     Points              
+1         bolong Guan              75             SSC       274.65              
+2         Eric Whelan              298            SSC       195.262             
+3         Peter Loney              777            SSC       187.824             
+4         Reed Gibson              12             SSC       100                 
+5         Tyler Burke              34             SSC       100                 
+6         Austin Kirk              91             SSC       93.432              
+
+Place     Driver                   Car Number     Class     Points              
+1         Austin Wood              331            STH       300                 
+2         Rick Brown               240            STH       79.918              
+3         alex lopez               729            STH       69.312              
+
+Place     Driver                   Car Number     Class     Points              
+1         Sam Mayorga              183            STR       200                 
+2         Michael Palero           16             STR       97.465              
+3         Hector Gonzalez          65             STR       90.96               
+
+Place     Driver                   Car Number     Class     Points              
+1         Bijan Yeoh               889            STS       300                 
+2         Craig Naylor             80             STS       296.829             
+3         Steve Hurson             200            STS       52.372              
+
+Place     Driver                   Car Number     Class     Points              
+1         Daniel Chavez            401            STU       100                 
+2         Fulton Haight            527            STU       100                 
+
+Place     Driver                   Car Number     Class     Points              
+1         William Marlow           108            STX       200                 
+2         Christian Lopez          279            STX       186.644             
+3         Ryan Powers              909            STX       100                 
+4         Jeffrey Nam              502            STX       74.461              
+
+Place     Driver                   Car Number     Class     Points              
+1         Tom Berry                72             XS        289.363             
+2         Jacob Abrams             728            XS        279.932             
+3         Mike Flanigan            98             XS        274.693             
+4         Christine Grice          17             XS        240.353             
+5         Bob Endicott             64             XS        200                 
+6         Kyle ORourke             68             XS        183.57              
+7         Mark Mervich             251            XS        75.755              
+8         Eric Jones               100            XS        54.343              
+9         Mansoor Ahmad            321            XS        32.171              

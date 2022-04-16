@@ -11,6 +11,8 @@ import sqlite3
 from sqlite3 import Error
 
 database_name = 'points.db'
+non_points = ['TO','X']
+
 
 class_results_table = """
 CREATE TABLE class_results (
@@ -218,7 +220,7 @@ def main():
                 if car_class not in non_points:
                     print(f"Class: {car_class}")
                 continue
-            if car_class in ['TO', 'X']:
+            if car_class in non_points:
                 continue
             car_number = int(item[2])
             if car_number >= 600 and car_number <= 699:

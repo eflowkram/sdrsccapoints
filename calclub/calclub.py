@@ -37,7 +37,7 @@ CREATE TABLE drivers (
 """
 
 points_table = """
-CREATE TABLE points (
+CREATE TABLE class_points (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     driver_id int(10),
     class varchar(10),
@@ -45,7 +45,6 @@ CREATE TABLE points (
     unique (driver_id,class)
 );
 """
-
 
 def create_connection(path):
     connection = None
@@ -112,7 +111,7 @@ def total_class_points(driver_id,car_class):
     sql=f"select points from class_results where driver_id={driver_id} and class='{car_class}'"
     class_points_results=execute_read_query(db_conn,sql)
     drops=calclub_drops(len(class_points_results))
-    print(f"no events: {len(class_points_results)} drops: {drops}")
+    print(f"number of events: {len(class_points_results)} drops: {drops}")
     count=len(class_points_results) - drops
     for p in class_points_results:
         rp.append(p[0])
@@ -154,6 +153,37 @@ if not os.path.isfile(database_name):
     execute_query(db_conn, points_table)
 else:
     db_conn = create_connection(database_name)
+
+def class_header(event_count):
+    event_count=event_count
+    e=""
+    for i in range(1,event_count+1):
+      e+=f"{'Event'}{i : <6}"
+      h=f"\n{'Place' : <10}{'Driver' : <25}{'Car Number' : <15}{'Class' : <10}"+e+f"{' Points' : <20}"
+    print(h)
+
+def class_standings(driver_id,car_class):
+    """ This will take the drivers id, and class, then pull a list of events.  It will query event_date and driver/class to get points for that
+    event.  It will compare the event_date and see if there's an event for that driver and class then append the points to the output, if that
+    event doesn't exist for that driver/class it will append zero points. """
+    cs=[]
+    ep=[]
+    driver_id=driver_id
+    car_class=car_class
+    sql=f"select distinct(event_date) from class_results"
+    results=execute_read_query(db_conn,sql)
+    for e in results:
+      sql=f"select points from class_results where driver_id={driver_id} and class='{car_class}' and event_date='{e[0]}'"
+      results=execute_read_query(db_conn,sql)
+      if len(results) == 1:
+        ep.append(results[0][0])
+      else:
+        ep.append(0)
+    class_sql=f"SELECT driver_name,car_number,points from class_points join drivers on drivers.id=class_points.driver_id where class='{car_class}' and driver_id='{driver_id}'"
+    results=execute_read_query(db_conn,class_sql)
+    cs=[results[0][0],results[0][1],car_class]
+    cs.append(results[0][2])
+    return cs,ep
 
 
 def main():
@@ -260,6 +290,7 @@ def main():
             results = execute_read_query(db_conn, sql)
             driver_id = results[0][0]
             sql = f"INSERT into class_results VALUES (NULL,'{event_date}',{driver_id},'{car_class}',0,0,0,1)"
+            print(sql)
             results = execute_query(db_conn, sql)
             update_average_points(driver_id, car_class)
         else:
@@ -276,7 +307,7 @@ def main():
           calculate points for class with drops and store in points table.
         """
         # zero points table
-        sql = "delete from points"
+        sql = "delete from class_points"
         execute_query(db_conn,sql)
         sql = "Select id from drivers order by id asc"
         driver_id_results = execute_read_query(db_conn,sql)
@@ -289,26 +320,37 @@ def main():
             update_average_points(driver_id,car_class)
             print(f"driver_id: {driver_id} class: {c[0]}")
             total_points=total_class_points(driver_id,c[0])
-            sql=f"INSERT into points values (NULL,{driver_id},'{car_class}',{total_points})"
+            sql=f"INSERT into class_points values (NULL,{driver_id},'{car_class}',{total_points})"
             result=execute_query(db_conn,sql)
           
     if args.print_points:
         car_class=[]
+        #find number of events
+        sql=f"select count(distinct event_date) from class_results"
+        results=execute_read_query(db_conn,sql)
+        event_count=results[0][0] 
         if args.car_class:
           car_class.append(args.car_class.upper())
         else:
-          sql=f"SELECT distinct class from points order by class ASC"
+          sql=f"SELECT distinct class from class_points order by class ASC"
           results=execute_read_query(db_conn,sql)
           for cc in results:
             car_class.append(cc[0])
         for c in car_class:
-          class_sql=f"SELECT driver_name,car_number,class,points from points join drivers on drivers.id=points.driver_id where class='{c}' order by points DESC"
+          class_sql=f"SELECT driver_id from class_points join drivers on drivers.id=class_points.driver_id where class='{c}' order by points DESC"
           results=execute_read_query(db_conn,class_sql)
+          epoints=""
           p=1
-          print(f"\n{'Place' : <10}{'Driver' : <25}{'Car Number' : <15}{'Class' : <10}{'Points' : <20}")
+          class_header(event_count)
           for l in results:
-            print(f"{p : <10}{l[0] : <25}{l[1] : <15}{l[2] : <10}{l[3] : <20}")
+            row,ep=class_standings(l[0],c)
+            for i in ep:
+              epoints+=f"{i:<11}"
+            line1=f"{p : <10}{row[0] : <25}{row[1] : <15}{row[2] : <9}"
+            line2=f"{row[3] : <20}"
+            print(line1,epoints,line2)
             p+=1
+            epoints=""
 
 if __name__ == '__main__':
     main()

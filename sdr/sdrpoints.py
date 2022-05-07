@@ -10,7 +10,6 @@ import os
 import sqlite3
 import re
 from sqlite3 import Error
-from io import StringIO
 import csv
 
 database_name = 'points.db'
@@ -50,6 +49,30 @@ CREATE TABLE class_points (
     points decimal(10,3),
     cones int(10),
     dnf int(10),
+    unique (driver_id,class)
+);
+"""
+
+driver_results_table = """
+CREATE TABLE driver_results (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    event_date date,
+    driver_id int(10),
+    class varchar(10),
+    place int(10),
+    final_time decimal(10,3),
+    points decimal(10,3),
+    national BOOLEAN DEFAULT 0 CHECK (national IN (0, 1)),
+    unique (event_date,driver_id)
+);
+"""
+
+driver_points_table = """
+CREATE TABLE driver_points (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    driver_id int(10),
+    class varchar(10),
+    points decimal(10,3),
     unique (driver_id,class)
 );
 """
@@ -201,9 +224,8 @@ def db_init():
     global db_conn
     if not os.path.isfile(database_name):
         db_conn = create_connection(database_name)
-        execute_query(db_conn, class_results_table)
-        execute_query(db_conn, drivers_table)
-        execute_query(db_conn, points_table)
+        for table in class_results_table, drivers_table, points_table, driver_results_table, driver_points_table:
+          execute_query(db_conn, table)
     else:
         db_conn = create_connection(database_name)
 
@@ -347,6 +369,7 @@ def main():
     args = argparser.parse_args()
     DEBUG = args.debug
     db_init()
+
     if args.url:
         r = requests.get(args.url)
         soup = BeautifulSoup(r.content, 'html.parser')
@@ -359,6 +382,7 @@ def main():
 
         class_data = table_data(class_table)
         for item in class_data:
+            row_length=len(item)
             first_element = listToString(item[0])
             if len(first_element) == 0:
                 continue

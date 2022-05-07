@@ -196,30 +196,21 @@ def get_event_date(table_handle):
             return result.group()
 
 
-def get_cones(table_row):
+def get_cone_dnf(table_row):
     tr = table_row
     # don't count last 2 columns
     column_count = len(tr) - 2
-    c = 0
-    pattern = "\\+\\d{1}"
+    cones, dnf = 0, 0
+    pc = "\\+\\d{1}"
+    pd = "\\+DNF"
     for i in tr[:column_count]:
-        result = re.search(pattern, str(i))
-        if result is not None:
-            c = c + int(result.group())
-    return c
-
-
-def get_dnf(table_row):
-    tr = table_row
-    # don't count last 2 columns
-    column_count = len(tr) - 2
-    c = 0
-    pattern = "\\+DNF"
-    for i in tr[:column_count]:
-        result = re.search(pattern, str(i))
-        if result is not None:
-            c += 1
-    return c
+        result_c = re.search(pc, str(i))
+        result_d = re.search(pd, str(i))
+        if result_c is not None:
+            cones = cones + int(result_c.group())
+        if result_d is not None:
+            dnf += 1
+    return cones, dnf
 
 
 def db_init():
@@ -288,6 +279,14 @@ def class_standings(driver_id, car_class):
         results[0][4],
     ]
     return cs, ep
+
+
+def class_point_parser(row):
+    pass
+
+
+def doy_point_parser(row):
+    pass
 
 
 def generate_points():
@@ -382,9 +381,16 @@ def main():
     if args.url:
         r = requests.get(args.url)
         soup = BeautifulSoup(r.content, "html.parser")
+        table_count = len(soup.find_all("table"))
         event_date = get_event_date(soup.find_all("table")[0])
-
         print(f"ed: {event_date}")
+        if table_count == 4:
+            class_point_parser(soup)
+        elif table_count == 2:
+            doy_point_parser(soup)
+        else:
+            sys.exit("Invalid Input")
+
         class_table = soup.find_all("table")[2]
         # = [[cell.text.strip() for cell in row.find_all(["th","td"])]
         #                        for row in class_table.find_all("tr")]i
@@ -414,8 +420,7 @@ def main():
                 print(f"winner_time: {winner_time}")
             driver = item[3].replace("'", "")
             points = sdrpoints(winner_time, float(final_time))
-            cones = get_cones(item)
-            dnf = get_dnf(item)
+            cones, dnf = get_cone_dnf(item)
             print(
                 f"Event Date: {event_date} Position: {position} Class: {car_class} Car No: {car_number} Driver: {driver} Points: {points} Cones: {cones} DNF: {dnf}"
             )

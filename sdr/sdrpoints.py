@@ -12,8 +12,8 @@ import re
 from sqlite3 import Error
 import csv
 
-database_name = 'points.db'
-non_points = ['TO', 'X']
+database_name = "points.db"
+non_points = ["TO", "X"]
 global DEBUG
 DEBUG = False
 
@@ -160,7 +160,7 @@ def total_class_points(driver_id, car_class):
 
 
 def listToString(s):
-    string = ''
+    string = ""
     for element in s:
         string += element
     return string
@@ -181,8 +181,10 @@ def sdrpoints(fastest, driver):
 
 
 def table_data(table_handle):
-    return [[cell.text.strip() for cell in row.find_all(["th", "td"])]
-            for row in table_handle.find_all("tr")]
+    return [
+        [cell.text.strip() for cell in row.find_all(["th", "td"])]
+        for row in table_handle.find_all("tr")
+    ]
 
 
 def get_event_date(table_handle):
@@ -224,8 +226,14 @@ def db_init():
     global db_conn
     if not os.path.isfile(database_name):
         db_conn = create_connection(database_name)
-        for table in class_results_table, drivers_table, points_table, driver_results_table, driver_points_table:
-          execute_query(db_conn, table)
+        for table in (
+            class_results_table,
+            drivers_table,
+            points_table,
+            driver_results_table,
+            driver_points_table,
+        ):
+            execute_query(db_conn, table)
     else:
         db_conn = create_connection(database_name)
 
@@ -235,24 +243,27 @@ def class_header_text(event_count):
     e = ""
     for i in range(1, event_count + 1):
         e += f"{'Event '}{i : <5}"
-    h = f"\n{'Place' : <10}{'Driver' : <25}{'Car' : <8}{'Class' : <10}" + \
-        e + f"{' Points' : <11}{'Cones' : <8}{'DNF' : <5}"
+    h = (
+        f"\n{'Place' : <10}{'Driver' : <25}{'Car' : <8}{'Class' : <10}"
+        + e
+        + f"{' Points' : <11}{'Cones' : <8}{'DNF' : <5}"
+    )
     return h
 
 
 def class_header_csv(event_count):
     event_count = event_count
-    h = ['Place', 'Driver', 'Car', 'Class']
+    h = ["Place", "Driver", "Car", "Class"]
     for i in range(1, event_count + 1):
         h.append(f"Event {i}")
-    h = h + ['Points', 'Cones', 'DNF']
+    h = h + ["Points", "Cones", "DNF"]
     return h
 
 
 def class_standings(driver_id, car_class):
-    """ This will take the drivers id, and class, then pull a list of events.  It will query event_date and driver/class to get points for that
+    """This will take the drivers id, and class, then pull a list of events.  It will query event_date and driver/class to get points for that
     event.  It will compare the event_date and see if there's an event for that driver and class then append the points to the output, if that
-    event doesn't exist for that driver/class it will append zero points. """
+    event doesn't exist for that driver/class it will append zero points."""
     cs = []
     ep = []
     driver_id = driver_id
@@ -274,17 +285,18 @@ def class_standings(driver_id, car_class):
         car_class,
         results[0][2],
         results[0][3],
-        results[0][4]]
+        results[0][4],
+    ]
     return cs, ep
 
 
 def generate_points():
     """
-      zero points table
-      get all driver ids
-      query class results, pull driver id, car class
-      pass driver id and class to total points function which will calculate drops and return total points for driver/class.
-      calculate points for class with drops and store in points table.
+    zero points table
+    get all driver ids
+    query class results, pull driver id, car class
+    pass driver id and class to total points function which will calculate drops and return total points for driver/class.
+    calculate points for class with drops and store in points table.
     """
     # zero points table
     sql = "delete from class_points"
@@ -312,82 +324,79 @@ def main():
         "-u",
         "--url",
         help="url to axware html",
-        action='store',
-        dest='url',
+        action="store",
+        dest="url",
         default=None,
-        required=False)
+        required=False,
+    )
     argparser.add_argument(
         "-n",
         "--national",
         help="car number for national",
-        dest='national',
+        dest="national",
         default=None,
-        required=False)
+        required=False,
+    )
     argparser.add_argument(
-        "-c",
-        "--car_class",
-        help="class for national",
-        default=None,
-        required=False)
+        "-c", "--car_class", help="class for national", default=None, required=False
+    )
     argparser.add_argument(
-        "-d",
-        "--event_date",
-        help="event_date",
-        default=None,
-        required=False)
+        "-d", "--event_date", help="event_date", default=None, required=False
+    )
     argparser.add_argument(
         "-g",
         "--generate",
         help="generate points",
-        action='store_true',
+        action="store_true",
         default=None,
-        required=False)
+        required=False,
+    )
     argparser.add_argument(
         "-p",
         "--print_points",
         help="Display points, can be used with -c/--car_class",
-        action='store_true',
-        required=False)
+        action="store_true",
+        required=False,
+    )
     argparser.add_argument(
         "-o",
         "--output",
         help="Output Format (CSV,Text)",
-        default='text',
-        required=False)
+        default="text",
+        required=False,
+    )
     argparser.add_argument(
-        "-f",
-        "--filename",
-        help="CSV Filename",
-        default='results.csv',
-        required=False)
+        "-f", "--filename", help="CSV Filename", default="results.csv", required=False
+    )
     argparser.add_argument(
         "--debug",
         help="enable debug",
         default=False,
-        action='store_true',
-        required=False)
+        action="store_true",
+        required=False,
+    )
     args = argparser.parse_args()
     DEBUG = args.debug
     db_init()
 
     if args.url:
         r = requests.get(args.url)
-        soup = BeautifulSoup(r.content, 'html.parser')
-        event_date = get_event_date(soup.find_all('table')[0])
+        soup = BeautifulSoup(r.content, "html.parser")
+        event_date = get_event_date(soup.find_all("table")[0])
 
         print(f"ed: {event_date}")
-        class_table = soup.find_all('table')[2]
+        class_table = soup.find_all("table")[2]
         # = [[cell.text.strip() for cell in row.find_all(["th","td"])]
         #                        for row in class_table.find_all("tr")]i
 
         class_data = table_data(class_table)
         for item in class_data:
-            row_length=len(item)
+            row_length = len(item)
             first_element = listToString(item[0])
             if len(first_element) == 0:
                 continue
             if first_element[0].isalpha():
-                car_class = first_element.split(' ')[0]
+                car_class = first_element.split(" ")[0]
                 if car_class not in non_points:
                     print(f"Class: {car_class}")
                 continue
@@ -396,11 +405,11 @@ def main():
             car_number = int(item[2])
             if car_number >= 1000:
                 continue
-            position = first_element.replace('T', '')
-            if item[10] in ['DNS', 'DNF']:
+            position = first_element.replace("T", "")
+            if item[10] in ["DNS", "DNF"]:
                 continue
             final_time = item[10]
-            if position == '1':
+            if position == "1":
                 winner_time = float(item[10])
                 print(f"winner_time: {winner_time}")
             driver = item[3].replace("'", "")
@@ -408,7 +417,8 @@ def main():
             cones = get_cones(item)
             dnf = get_dnf(item)
             print(
-                f"Event Date: {event_date} Position: {position} Class: {car_class} Car No: {car_number} Driver: {driver} Points: {points} Cones: {cones} DNF: {dnf}")
+                f"Event Date: {event_date} Position: {position} Class: {car_class} Car No: {car_number} Driver: {driver} Points: {points} Cones: {cones} DNF: {dnf}"
+            )
             # Create driver record if it doesn't exist
             sql = f"SELECT id from drivers where car_number = '{car_number}'"
             driver_results = execute_read_query(db_conn, sql)
@@ -428,7 +438,7 @@ def main():
         sql = f"SELECT class_results.id,drivers.id from class_results JOIN drivers on drivers.id = driver_id where event_date = '{event_date}' and class = '{car_class}' and car_number = '{car_number}'"
         results = execute_read_query(db_conn, sql)
         if len(results) == 0:
-            print('no record found, adding record.')
+            print("no record found, adding record.")
             # get driver_id
             sql = f"SELECT id from drivers where car_number = '{car_number}'"
             results = execute_read_query(db_conn, sql)
@@ -449,10 +459,10 @@ def main():
         generate_points()
         car_class = []
         # open filehandle for csv
-        if args.output == 'csv':
+        if args.output == "csv":
             fn = args.filename
-            fh = open(fn, 'w')
-            writer = csv.writer(fh, delimiter=',', quotechar='"')
+            fh = open(fn, "w")
+            writer = csv.writer(fh, delimiter=",", quotechar='"')
         # find number of events
         sql = f"select count(distinct event_date) from class_results"
         results = execute_read_query(db_conn, sql)
@@ -469,7 +479,7 @@ def main():
             class_sql = f"SELECT driver_id from class_points join drivers on drivers.id=class_points.driver_id where class='{c}' order by points DESC"
             results = execute_read_query(db_conn, class_sql)
             epoints = ""
-            if args.output == 'text':
+            if args.output == "text":
                 h = class_header_text(event_count)
                 print(h)
             else:
@@ -478,13 +488,13 @@ def main():
                 row, ep = class_standings(l[0], c)
                 if DEBUG:
                     print(row, ep)
-                if args.output == 'text':
+                if args.output == "text":
                     for i in ep:
                         epoints += f"{i:<11}"
                     line1 = f"{p : <10}{row[0] : <25}{row[1] : <8}{row[2] : <9}"
                     line2 = f"{row[3] : <10}{row[4] : <8}{row[5] : <8}"
                     print(line1, epoints, line2)
-                elif args.output == 'csv':
+                elif args.output == "csv":
                     r = [p, row[0], row[1], row[2]]
                     for i in ep:
                         r.append(i)
@@ -492,9 +502,9 @@ def main():
                     writer.writerow(r)
                 epoints = ""
                 p += 1
-        if args.output == 'csv':
+        if args.output == "csv":
             fh.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

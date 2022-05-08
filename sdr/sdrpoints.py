@@ -634,7 +634,7 @@ def main():
             print(f"{driver_header_text(event_c)}")
             for r in result:
                 event_p = []
-                event_points_string=""
+                event_points_string = ""
                 for ed in event_dates():
                     sql = f"SELECT points from driver_results join drivers on driver_results.driver_id=drivers.id where car_number = {r[2]} and event_date='{ed}'"
                     event_result = execute_read_query(db_conn, sql)
@@ -643,17 +643,19 @@ def main():
                     else:
                         event_p.append(str(event_result[0][0]))
                 for e in event_p:
-                  event_points_string +=f"{e : <11}"
-                print(f"{r[0] : <10}{r[1] : <20}{r[2] : <8}{event_points_string}{r[3] : <8}")
+                    event_points_string += f"{e : <11}"
+                print(
+                    f"{r[0] : <10}{r[1] : <20}{r[2] : <8}{event_points_string}{r[3] : <8}"
+                )
         if args.output == "csv":
-            dh_string=""
-            dhl=driver_header_csv(event_c)
+            dh_string = ""
+            dhl = driver_header_csv(event_c)
             for i in dhl:
-              dh_string+=f"{i},"
+                dh_string += f"{i},"
             print(dh_string[:-1])
             for r in result:
                 event_p = []
-                event_points_string=""
+                event_points_string = ""
                 for ed in event_dates():
                     sql = f"SELECT points from driver_results join drivers on driver_results.driver_id=drivers.id where car_number = {r[2]} and event_date='{ed}'"
                     event_result = execute_read_query(db_conn, sql)
@@ -662,7 +664,7 @@ def main():
                     else:
                         event_p.append(str(event_result[0][0]))
                 for e in event_p:
-                  event_points_string +=f"{e},"
+                    event_points_string += f"{e},"
                 print(f"{r[0]},{r[1]},{r[2]},{event_points_string}{r[3]}")
 
 
